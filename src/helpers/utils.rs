@@ -10,5 +10,8 @@ pub struct Settings {
 }
 
 pub fn calculate_xy(settings: &SinusCircle) -> Point2 {
-    Point2::new(settings.origin.x + settings.radius * f32::cos(settings.rotation * settings.speed), settings.origin.y + settings.radius * f32::sin(settings.rotation * settings.speed))
+    Point2::new(
+        settings.origin.x + settings.radius * f32::cos(settings.rotation * settings.speed),
+        settings.origin.y + settings.radius * f32::sin(settings.rotation * settings.speed),
+    )
 }

@@ -17,15 +17,22 @@ pub struct SinusCircle {
 }
 
 impl SinusCircle {
-    pub fn new(draw: &nannou::Draw, x: f32, y: f32, radius: f32, rotation: f32, speed: f32) -> Self {
+    pub fn new(
+        draw: &nannou::Draw,
+        x: f32,
+        y: f32,
+        radius: f32,
+        rotation: f32,
+        speed: f32,
+    ) -> Self {
         let mut new = Self {
             origin: Point2::new(x, y),
             end: Point2::new(0., 0.),
             radius,
             rotation,
-            speed
+            speed,
         };
-        
+
         let elipse = draw
             .ellipse()
             .no_fill()
