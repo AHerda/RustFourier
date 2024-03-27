@@ -37,7 +37,10 @@ fn view(app: &App, frame: Frame) {
     }
 
     let vertecies = temp.iter().enumerate().map(|(i, &point)| {
-        (point, rgba8(255, 0, 0, (i as f32 / points as f32 * 255.) as u8))
+        (
+            point,
+            rgba8(255, 0, 0, (i as f32 / points as f32 * 255.) as u8),
+        )
     });
     draw.polyline().weight(3.).points_colored(vertecies);
 
